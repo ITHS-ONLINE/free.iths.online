@@ -1,0 +1,15 @@
+{
+  "subdomain": "maria-blog",
+  "type": "CNAME",
+  "value": "maria-blog.pages.dev",
+  "owner": {
+    "name": "Maria Garcia",
+    "email": "maria.garcia@example.com",
+    "github": "mariagarcia"
+  },
+  "project": {
+    "name": "Maria's Tech Blog",
+    "description": "Technical blog about web development, tutorials, and programming tips",
+    "url": "https://github.com/mariagarcia/tech-blog"
+  }
+}

@@ -1,0 +1,12 @@
+# Code Owners File
+# This file defines individuals or teams that are responsible for code in this repository.
+# All PRs modifying domain configurations will require manual review.
+
+# All domain configuration files require review by maintainers
+domains/*.json @ITHS-ONLINE/maintainers
+
+# Scripts directory
+scripts/ @ITHS-ONLINE/maintainers
+
+# Documentation changes (optional review)
+docs/ @ITHS-ONLINE/maintainers

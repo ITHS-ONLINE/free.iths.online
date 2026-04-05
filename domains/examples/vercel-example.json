@@ -1,0 +1,15 @@
+{
+  "subdomain": "john-portfolio",
+  "type": "CNAME",
+  "value": "john-portfolio.vercel.app",
+  "owner": {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "github": "johndoe"
+  },
+  "project": {
+    "name": "John's Portfolio",
+    "description": "Personal portfolio showcasing web development projects built with React and Next.js",
+    "url": "https://github.com/johndoe/portfolio"
+  }
+}

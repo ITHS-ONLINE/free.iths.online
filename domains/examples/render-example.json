@@ -1,0 +1,15 @@
+{
+  "subdomain": "david-app",
+  "type": "CNAME",
+  "value": "david-app.onrender.com",
+  "owner": {
+    "name": "David Chen",
+    "email": "david.chen@example.com",
+    "github": "davidchen"
+  },
+  "project": {
+    "name": "David's Full-Stack Application",
+    "description": "Full-stack web application with Node.js backend and React frontend",
+    "url": "https://github.com/davidchen/fullstack-app"
+  }
+}

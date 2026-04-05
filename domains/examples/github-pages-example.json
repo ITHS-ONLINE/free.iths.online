@@ -1,0 +1,15 @@
+{
+  "subdomain": "alex-projects",
+  "type": "CNAME",
+  "value": "alexdev.github.io",
+  "owner": {
+    "name": "Alex Johnson",
+    "email": "alex.johnson@example.com",
+    "github": "alexdev"
+  },
+  "project": {
+    "name": "Alex's Project Showcase",
+    "description": "Collection of open-source projects and coding experiments",
+    "url": "https://github.com/alexdev/projects"
+  }
+}

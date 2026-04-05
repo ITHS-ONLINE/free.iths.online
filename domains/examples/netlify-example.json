@@ -1,0 +1,15 @@
+{
+  "subdomain": "jane-portfolio",
+  "type": "CNAME",
+  "value": "jane-portfolio.netlify.app",
+  "owner": {
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "github": "janesmith"
+  },
+  "project": {
+    "name": "Jane's Creative Portfolio",
+    "description": "Design portfolio featuring UI/UX projects and case studies",
+    "url": "https://github.com/janesmith/design-portfolio"
+  }
+}
