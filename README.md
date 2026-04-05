@@ -3,20 +3,6 @@
     <img src="free.iths.online.png" alt="Banner Description" class="center-banner">
 </div>
 
-<!-- CSS Styling -->
-<style>
-    .banner-container {
-        display: flex;
-        justify-content: center; /* Centers horizontally */
-        width: 100%;
-    }
-
-    .center-banner {
-        max-width: 100%; /* Ensures it doesn't overflow container */
-        height: auto;     /* Maintains aspect ratio */
-    }
-</style>
-
 # 🌐 Free Subdomains for Students - ITHS.ONLINE
 
 Welcome to **free.iths.online**! This project provides free subdomains for students to host their portfolios, open-source projects, and personal websites.
