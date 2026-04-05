@@ -1,0 +1,28 @@
+# Robots.txt for free.iths.online
+# SEO Configuration for search engine crawlers
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /docs/
+Allow: /domains/
+
+# Disallow admin and private areas (if any)
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /scripts/
+
+# Sitemaps
+Sitemap: https://free.iths.online/sitemap.xml
+
+# Crawl delay (optional - allows search engines to crawl at a reasonable rate)
+Crawl-delay: 1
+
+# Additional rules for specific crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

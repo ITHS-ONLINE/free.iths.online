@@ -1,0 +1,39 @@
+# GitHub Pages Configuration for free.iths.online
+# Jekyll configuration
+
+title: Free Subdomains for Students
+description: Get free subdomains for students to host portfolios, blogs, and projects
+url: https://free.iths.online
+author: Hari Anand
+email: harinand.dev@gmail.com
+
+# Jekyll settings
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+google_site_verification: # Add your Google Search Console ID here
+social:
+  name: ITHS.ONLINE
+  links:
+    - https://iths.online
+    - https://github.com/hariusanand/free.iths.online
+
+# Build settings
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Custom variables
+github_username: hariusanand
+support_email: harinand.dev@gmail.com
+main_website: https://iths.online

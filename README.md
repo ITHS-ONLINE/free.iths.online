@@ -1,11 +1,8 @@
-<!-- HTML Structure -->
-<div class="banner-container">
-    <img src="free.iths.online.png" alt="Banner Description" class="center-banner">
-</div>
-
 # 🌐 Free Subdomains for Students - ITHS.ONLINE
 
 Welcome to **free.iths.online**! This project provides free subdomains for students to host their portfolios, open-source projects, and personal websites.
+
+> 🎨 **Visit our website:** [free.iths.online](https://free.iths.online) — Professional dark yellow and black design with full documentation and SEO optimization
 
 ## 🎯 What We Offer
 
@@ -133,14 +130,22 @@ Violations may result in domain removal without notice.
 
 ## 🆘 Support
 
-Need help? 
-- 📖 Check our [documentation](docs/)
-- 💬 Open an issue on GitHub
-- 📧 Contact us at: support@iths.online
+Need help? We're here to assist you!
+
+- 🌐 **Website:** [iths.online](https://iths.online) - Visit our main site
+- 📧 **Email:** [harinand.dev@gmail.com](mailto:harinand.dev@gmail.com) - Direct support
+- 📖 **Documentation:** Check our [docs folder](docs/) for detailed guides
+- 💬 **GitHub Issues:** Open an issue on [our repository](https://github.com/hariusanand/free.iths.online/issues)
+- 🎨 **Live Website:** Visit [free.iths.online](https://free.iths.online) for an interactive guide
 
 ## 🙏 Acknowledgments
 
-This project is maintained by ITHS.ONLINE to support students and developers in building their online presence.
+This project is maintained by **ITHS.ONLINE** (created by Hari Anand) to support students and developers in building their online presence.
+
+**Project Links:**
+- 🌐 Main Website: [iths.online](https://iths.online)
+- 🎨 Service Website: [free.iths.online](https://free.iths.online)
+- 📧 Email: [harinand.dev@gmail.com](mailto:harinand.dev@gmail.com)
 
 ## 📄 License
 
