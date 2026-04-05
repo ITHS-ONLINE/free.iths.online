@@ -1,8 +1,13 @@
-# 🌐 Free Subdomains for Students - ITHS.ONLINE
+<!-- HTML Structure -->
+<div class="banner-container">
+    <img src="free.iths.online.png" alt="Banner Description" class="center-banner">
+</div>
+
+# Free Subdomains for Students - ITHS.ONLINE
 
 Welcome to **free.iths.online**! This project provides free subdomains for students to host their portfolios, open-source projects, and personal websites.
 
-> 🎨 **Visit our website:** [free.iths.online](https://free.iths.online) — Professional dark yellow and black design with full documentation and SEO optimization
+> **Visit our website:** [free.iths.online](https://free.iths.online)
 
 ## 🎯 What We Offer
 
