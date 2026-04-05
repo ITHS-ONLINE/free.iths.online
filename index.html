@@ -3,304 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get free subdomains for students - Host your portfolio, blog, or project on free.iths.online. Simple GitHub-based domain registration.">
-    <meta name="keywords" content="free subdomains, student portfolio, free hosting, iths.online, subdomain registry, github pages">
-    <meta name="author" content="ITHS - Hari Anand">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Free Subdomains for Students - ITHS.ONLINE">
-    <meta property="og:description" content="Get your free subdomain and host your portfolio, project, or blog. Perfect for students and developers.">
-    <meta property="og:url" content="https://free.iths.online">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Free Subdomains for Students">
-    <meta name="twitter:description" content="Get your free subdomain on free.iths.online">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://free.iths.online/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23FFD700'>🌐</text></svg>">
-    
-    <title>Free Subdomains for Students | ITHS.ONLINE</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ITHS.ONLINE | Free Student Subdomains</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --yellow: #FACC15;
+            --black: #000000;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+            overflow-x: hidden;
+        }
+
+        /* Neo-Brutalist Shadow */
+        .brutal-shadow {
+            box-shadow: 8px 8px 0px 0px var(--black);
+            transition: all 0.2s ease;
+            border: 3px solid var(--black);
+        }
+
+        .brutal-shadow:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 12px 12px 0px 0px var(--black);
+        }
+
+        .brutal-btn {
+            background-color: var(--yellow);
+            border: 3px solid var(--black);
+            box-shadow: 4px 4px 0px 0px var(--black);
+            transition: all 0.1s;
+        }
+
+        .brutal-btn:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px 0px var(--black);
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            background: var(--black);
+            color: var(--yellow);
+            padding: 10px 0;
+            border-top: 3px solid var(--black);
+            border-bottom: 3px solid var(--black);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: var(--white); }
+        ::-webkit-scrollbar-thumb { 
+            background: var(--black); 
+            border: 3px solid var(--white);
+        }
+    </style>
 </head>
-<body>
+<body class="scroll-smooth">
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">🌐 free.iths.online</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#offers" class="nav-link">What We Offer</a></li>
-                <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
-                <li class="nav-item"><a href="#submit" class="nav-link">Get Domain</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="https://github.com" class="nav-link nav-github" target="_blank">GitHub</a></li>
-            </ul>
+    <nav class="sticky top-0 z-50 bg-white border-b-4 border-black py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-3xl font-black tracking-tighter">ITHS<span class="text-yellow-400">.</span>ONLINE</div>
+            <div class="hidden md:flex space-x-8 font-bold uppercase text-sm tracking-widest">
+                <a href="#how" class="hover:underline decoration-yellow-400 decoration-4">How it works</a>
+                <a href="#docs" class="hover:underline decoration-yellow-400 decoration-4">Docs</a>
+                <a href="#faq" class="hover:underline decoration-yellow-400 decoration-4">FAQ</a>
+            </div>
+            <a href="https://github.com" class="brutal-btn px-6 py-2 font-black uppercase text-sm">GitHub</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Free Subdomains for Students</h1>
-            <p>Get your own custom subdomain on <strong>iths.online</strong> — For free!</p>
-            <div class="hero-buttons">
-                <a href="#submit" class="btn btn-primary">Get Your Domain Now</a>
-                <a href="#offers" class="btn btn-secondary">Learn More</a>
+    <header class="relative py-20 px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <span class="bg-black text-yellow-400 px-4 py-1 font-bold uppercase text-sm mb-4 inline-block">Free for students</span>
+                <h1 class="text-6xl md:text-8xl font-black leading-none mb-6 uppercase">
+                    Your site, <br><span class="bg-yellow-400 px-2">Better.</span>
+                </h1>
+                <p class="text-xl font-medium mb-8 border-l-4 border-black pl-4">
+                    Claim your professional <b>.iths.online</b> subdomain. High performance, zero cost, built for the next generation of devs.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#how" class="brutal-btn px-10 py-4 text-xl font-black uppercase">Get Yours</a>
+                    <button class="border-3 border-black px-10 py-4 text-xl font-black uppercase hover:bg-black hover:text-white transition-colors">Docs</button>
+                </div>
+            </div>
+            <div class="relative reveal delay-200">
+                <div class="brutal-shadow bg-yellow-400 p-2 rounded-lg floating">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800" alt="Coding" class="border-4 border-black grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <!-- Abstract decorations -->
+                <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-black -z-10"></div>
+                <div class="absolute -top-6 -right-6 w-24 h-24 border-4 border-black -z-10"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Marquee -->
+    <div class="marquee font-black uppercase text-2xl">
+        <div class="marquee-content">
+            PORTFOLIO.ITHS.ONLINE • BLOG.ITHS.ONLINE • PROJECT.ITHS.ONLINE • DEV.ITHS.ONLINE • SHOWCASE.ITHS.ONLINE • 
+            PORTFOLIO.ITHS.ONLINE • BLOG.ITHS.ONLINE • PROJECT.ITHS.ONLINE • DEV.ITHS.ONLINE • SHOWCASE.ITHS.ONLINE • 
+        </div>
+    </div>
+
+    <!-- Steps -->
+    <section id="how" class="py-24 px-6 bg-yellow-400 border-b-4 border-black">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-black uppercase mb-16 text-center">3 Steps to Go Live</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal bg-white p-8 brutal-shadow">
+                    <div class="text-6xl font-black mb-4">01</div>
+                    <h3 class="text-2xl font-black uppercase mb-4">Fork & Config</h3>
+                    <p class="font-medium">Fork our repository and add your desired subdomain to the JSON configuration file.</p>
+                </div>
+                <div class="reveal delay-200 bg-white p-8 brutal-shadow">
+                    <div class="text-6xl font-black mb-4">02</div>
+                    <h3 class="text-2xl font-black uppercase mb-4">Pull Request</h3>
+                    <p class="font-medium">Submit your PR. Our team reviews every entry to ensure community safety.</p>
+                </div>
+                <div class="reveal delay-400 bg-white p-8 brutal-shadow">
+                    <div class="text-6xl font-black mb-4">03</div>
+                    <h3 class="text-2xl font-black uppercase mb-4">Deployment</h3>
+                    <p class="font-medium">Once merged, your domain goes live globally within 24 hours. Simple as that.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Offers Section -->
-    <section id="offers" class="offers">
-        <h2>What We Offer</h2>
-        <p class="section-subtitle">Choose your own free subdomain:</p>
-        
-        <div class="domain-examples">
-            <div class="domain-card">
-                <code>yourname.iths.online</code>
-                <p>Perfect for your portfolio</p>
+    <!-- Code Preview -->
+    <section id="docs" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h2 class="text-5xl font-black uppercase mb-8">Dev-Friendly <br>Setup</h2>
+                <ul class="space-y-4 font-bold text-lg">
+                    <li class="flex items-center gap-3"><span class="bg-black text-white px-2">✔</span> Works with Vercel & Netlify</li>
+                    <li class="flex items-center gap-3"><span class="bg-black text-white px-2">✔</span> GitHub Pages Support</li>
+                    <li class="flex items-center gap-3"><span class="bg-black text-white px-2">✔</span> Full CNAME Record Control</li>
+                    <li class="flex items-center gap-3"><span class="bg-black text-white px-2">✔</span> Manual PR Review (No Spam)</li>
+                </ul>
             </div>
-            <div class="domain-card">
-                <code>project.iths.online</code>
-                <p>Showcase your project</p>
-            </div>
-            <div class="domain-card">
-                <code>portfolio.iths.online</code>
-                <p>Your personal brand</p>
-            </div>
-        </div>
-
-        <div class="features">
-            <div class="feature">
-                <h3>✨ Student Portfolios</h3>
-                <p>Build your online presence with a professional domain</p>
-            </div>
-            <div class="feature">
-                <h3>🚀 Open-Source Projects</h3>
-                <p>Give your projects a custom domain</p>
-            </div>
-            <div class="feature">
-                <h3>📝 Personal Blogs</h3>
-                <p>Start your blog with your own domain</p>
-            </div>
-            <div class="feature">
-                <h3>🎨 Creative Showcases</h3>
-                <p>Display your creative work professionally</p>
-            </div>
-            <div class="feature">
-                <h3>💼 Project Demos</h3>
-                <p>Demo your projects in style</p>
-            </div>
-            <div class="feature">
-                <h3>🆓 Completely Free</h3>
-                <p>No hidden costs, no subscriptions required</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <h2>How It Works</h2>
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>Deploy Your Website</h3>
-                <p>Deploy on Vercel, Netlify, GitHub Pages, or any platform</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>Fork Repository</h3>
-                <p>Fork our GitHub repository and create a Pull Request</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>Submit Configuration</h3>
-                <p>Add your domain configuration in JSON format</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h3>Manual Review</h3>
-                <p>We verify your submission and approve it</p>
-            </div>
-            <div class="step">
-                <div class="step-number">5</div>
-                <h3>Get Your Domain</h3>
-                <p>Your domain goes live on our DNS records</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Requirements Section -->
-    <section class="requirements">
-        <h2>Requirements</h2>
-        <ul class="requirements-list">
-            <li>✅ Your website must be already deployed and accessible</li>
-            <li>✅ You need a valid deployment URL (Vercel, Netlify, etc.)</li>
-            <li>✅ Content must be appropriate and follow our guidelines</li>
-            <li>✅ Be a student or working on open-source projects</li>
-        </ul>
-    </section>
-
-    <!-- Submit Section -->
-    <section id="submit" class="submit">
-        <h2>How to Submit</h2>
-        
-        <div class="submit-steps">
-            <div class="submit-step">
-                <h3>Quick Start</h3>
-                <ol>
-                    <li>Fork this repository on GitHub</li>
-                    <li>Create a new JSON file in the <code>domains/</code> directory</li>
-                    <li>Submit a Pull Request</li>
-                    <li>Wait for review and approval</li>
-                </ol>
-            </div>
-
-            <div class="submit-step">
-                <h3>Domain Configuration Format</h3>
-                <p>Create a JSON file like <code>domains/yourname.json</code>:</p>
-                <pre><code>{
-  "subdomain": "yourname",
-  "type": "CNAME",
-  "value": "your-project.vercel.app",
-  "owner": {
-    "name": "Your Name",
-    "email": "your@email.com",
-    "github": "your-github-username"
-  },
-  "project": {
-    "name": "My Portfolio",
-    "description": "Brief description",
-    "url": "https://github.com/username/repo"
+            <div class="reveal bg-black p-1 rounded-xl brutal-shadow">
+                <div class="bg-zinc-900 rounded-lg p-6 overflow-x-auto">
+                    <div class="flex gap-2 mb-4">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <pre class="text-yellow-400 font-mono text-sm">
+{
+  <span class="text-white">"subdomain"</span>: "yourname",
+  <span class="text-white">"type"</span>: "CNAME",
+  <span class="text-white">"value"</span>: "user.github.io",
+  <span class="text-white">"owner"</span>: {
+    "name": "Student Dev",
+    "github": "username"
   }
-}</code></pre>
-            </div>
-        </div>
-
-        <div class="submit-button">
-            <a href="https://github.com/hariusanand/free.iths.online" target="_blank" class="btn btn-primary btn-large">
-                View on GitHub →
-            </a>
-        </div>
-    </section>
-
-    <!-- Documentation Section -->
-    <section class="documentation">
-        <h2>Documentation & Guides</h2>
-        <p class="section-subtitle">Deployment guides for popular platforms:</p>
-        
-        <div class="docs-grid">
-            <a href="https://github.com/hariusanand/free.iths.online/blob/main/docs/vercel.md" target="_blank" class="doc-card">
-                <span class="doc-icon">🔵</span>
-                <h3>Vercel</h3>
-                <p>Deploy on Vercel</p>
-            </a>
-            <a href="https://github.com/hariusanand/free.iths.online/blob/main/docs/netlify.md" target="_blank" class="doc-card">
-                <span class="doc-icon">🟢</span>
-                <h3>Netlify</h3>
-                <p>Deploy on Netlify</p>
-            </a>
-            <a href="https://github.com/hariusanand/free.iths.online/blob/main/docs/github-pages.md" target="_blank" class="doc-card">
-                <span class="doc-icon">⚫</span>
-                <h3>GitHub Pages</h3>
-                <p>Deploy on GitHub Pages</p>
-            </a>
-            <a href="https://github.com/hariusanand/free.iths.online/blob/main/docs/cloudflare-pages.md" target="_blank" class="doc-card">
-                <span class="doc-icon">🔶</span>
-                <h3>Cloudflare Pages</h3>
-                <p>Deploy on Cloudflare</p>
-            </a>
-            <a href="https://github.com/hariusanand/free.iths.online/blob/main/docs/render.md" target="_blank" class="doc-card">
-                <span class="doc-icon">🟠</span>
-                <h3>Render</h3>
-                <p>Deploy on Render</p>
-            </a>
-            <a href="https://github.com/hariusanand/free.iths.online/blob/main/docs/other-platforms.md" target="_blank" class="doc-card">
-                <span class="doc-icon">📖</span>
-                <h3>Other Platforms</h3>
-                <p>More deployment options</p>
-            </a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get Support</h2>
-        <div class="contact-content">
-            <p>Need help? Have questions? We're here to support you!</p>
-            
-            <div class="contact-methods">
-                <div class="contact-method">
-                    <h3>📧 Email</h3>
-                    <a href="mailto:harinand.dev@gmail.com">harinand.dev@gmail.com</a>
-                </div>
-                
-                <div class="contact-method">
-                    <h3>🌐 Website</h3>
-                    <a href="https://iths.online" target="_blank">iths.online</a>
-                </div>
-                
-                <div class="contact-method">
-                    <h3>💬 GitHub</h3>
-                    <p>Open an issue on our <a href="https://github.com/hariusanand/free.iths.online" target="_blank">GitHub repository</a></p>
+}</pre>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#offers">What We Offer</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#submit">Get Domain</a></li>
-                    <li><a href="https://github.com/hariusanand/free.iths.online" target="_blank">GitHub</a></li>
-                </ul>
+    <footer class="bg-black text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 text-center md:text-left">
+            <div>
+                <div class="text-4xl font-black mb-4">ITHS<span class="text-yellow-400">.</span>ONLINE</div>
+                <p class="text-zinc-400 max-w-sm">Empowering students to build a better web. One subdomain at a time.</p>
             </div>
-            
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="https://github.com/hariusanand/free.iths.online/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a></li>
-                    <li><a href="https://github.com/hariusanand/free.iths.online/blob/main/LICENSE" target="_blank">License</a></li>
-                    <li><a href="https://github.com/hariusanand/free.iths.online" target="_blank">Repository</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="mailto:harinand.dev@gmail.com">Email Support</a></li>
-                    <li><a href="https://iths.online" target="_blank">Visit iths.online</a></li>
-                </ul>
+            <div class="flex flex-col gap-4">
+                <p class="font-black uppercase tracking-widest text-yellow-400 text-sm">Support</p>
+                <a href="mailto:harinand.dev@gmail.com" class="text-2xl hover:text-yellow-400 transition-colors font-bold">harinand.dev@gmail.com</a>
+                <div class="flex justify-center md:justify-start gap-6 mt-4">
+                    <span class="bg-white text-black font-black px-3 py-1">MIT LICENSE</span>
+                    <span class="border border-white px-3 py-1 font-black underline">GITHUB</span>
+                </div>
             </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2026 <a href="https://iths.online" target="_blank">ITHS.ONLINE</a>. All rights reserved.</p>
-            <p>Built with ❤️ for students and developers | <a href="https://github.com/hariusanand/free.iths.online" target="_blank">View on GitHub</a></p>
+        <div class="max-w-6xl mx-auto mt-20 pt-10 border-t border-zinc-800 text-sm text-zinc-500 flex justify-between">
+            <p>© 2024 ITHS.ONLINE</p>
+            <p>Built with ⚡ by Hari Anand</p>
         </div>
     </footer>
 
-    <!-- Schema Markup for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Free Subdomains for Students - ITHS.ONLINE",
-      "url": "https://free.iths.online",
-      "description": "Get free subdomains for students to host their portfolios, blogs, and projects",
-      "author": {
-        "@type": "Person",
-        "name": "Hari Anand",
-        "email": "harinand.dev@gmail.com",
-        "url": "https://iths.online"
-      }
-    }
+    <script>
+        // Scroll Reveal Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Smooth reveal for staggered cards
+        document.querySelectorAll('.reveal').forEach((el, i) => {
+            el.style.transitionDelay = `${i * 100}ms`;
+        });
     </script>
 </body>
 </html>
