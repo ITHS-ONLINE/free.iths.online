@@ -1,0 +1,61 @@
+name: Validate Domain Configuration
+
+on:
+  pull_request:
+    paths:
+      - 'domains/*.json'
+  push:
+    paths:
+      - 'domains/*.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Validate domain configurations
+      run: |
+        echo "Validating all domain configurations..."
+        python scripts/validate.py domains/*.json || exit 1
+        echo "✅ All validations passed!"
+    
+    - name: Check for duplicate subdomains
+      run: |
+        echo "Checking for duplicate subdomains..."
+        python -c "
+        import json
+        import glob
+        
+        subdomains = {}
+        duplicates = []
+        
+        for file in glob.glob('domains/*.json'):
+            if 'examples' in file:
+                continue
+            try:
+                with open(file, 'r') as f:
+                    data = json.load(f)
+                    subdomain = data.get('subdomain', '')
+                    if subdomain in subdomains:
+                        duplicates.append(f'{subdomain} in {file} and {subdomains[subdomain]}')
+                    else:
+                        subdomains[subdomain] = file
+            except Exception as e:
+                print(f'Error processing {file}: {e}')
+        
+        if duplicates:
+            print('❌ Duplicate subdomains found:')
+            for dup in duplicates:
+                print(f'  - {dup}')
+            exit(1)
+        else:
+            print('✅ No duplicate subdomains found')
+        "
